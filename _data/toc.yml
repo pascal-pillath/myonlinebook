@@ -27,20 +27,20 @@
   not_numbered: true
 
 # External link
-- title: GitHub repository
-  url: https://github.com/jupyter/jupyter-book
-  external: true
-  not_numbered: true
+#- title: GitHub repository
+#  url: https://github.com/jupyter/jupyter-book
+#  external: true
+#  not_numbered: true
 
 # Adds a searchbar link
-- title: Search
-  search: true
+#- title: Search
+#  search: true
 
 # Divider for meta-pages and content page
-- divider: true
+#- divider: true
 
 # Add a header and sample content section
-- header: Demo textbook
+#- header: Demo textbook
 
 # A chapter w/ a collection of sections beneath it
 - title: Features and customization
@@ -50,7 +50,4 @@
   sections:
   - title: Markdown files
     url: /features/markdown
-    not_numbered: true
-  - title: Jupyter notebooks
-    url: /features/notebooks
     not_numbered: true
