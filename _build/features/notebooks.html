@@ -21,10 +21,18 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Aufgabe-1">Aufgabe 1<a class="anchor-link" href="#Aufgabe-1"> </a></h1><p>Blablabla</p>
 <h2 id="Angebot-Nachfrage">Angebot Nachfrage<a class="anchor-link" href="#Angebot-Nachfrage"> </a></h2><p>blabla</p>
-<p>Hier kann man einen Grpahen verändern.... in Echtzeit!! O.o
-Die Geburt Ludwigs XIV. im Schloss Saint-Germain-en-Laye erschien vielen als glückliches Ereignis, denn dreiundzwanzig Jahre lang war die Ehe seiner Eltern Ludwig XIII. und Anna von Österreich ohne Nachkommen geblieben. Durch seine Geburt wurde die befürchtete Thronfolge von Gaston d'Orléans zurückgestellt. Aus Dankbarkeit erhielt der Neugeborene den Beinamen Dieudonné (der Gottgegebene). Sein Bruder, Herzog Philipp I. d’Orléans, wurde 1640 geboren und starb 1701.</p>
 <p>Schon als Vierjähriger wurde Ludwig am 14. Mai 1643 als König inthronisiert. Er lebte aber bis zu seinem dreizehnten Lebensjahr (1651) unter der Regentschaft seiner Mutter Anna von Österreich. Die tatsächliche Macht übte in dieser Zeit der „regierende Minister“ Kardinal Jules Mazarin aus. Mazarin bereitete Ludwig zielgerichtet auf seine Rolle als absolutistischer Herrscher vor. Schritt für Schritt wurde der junge König an der Macht beteiligt und teilte sich schließlich die Verantwortung mit Mazarin. Durch die außenpolitischen Erfolge der Minister-Kardinäle Richelieu und Mazarin politisch gestärkt, entfaltete Ludwig das absolutistische Königtum hochbarocker Prägung in Frankreich, mit einem Hofleben, das ganz auf die Person des Herrschers zugeschnitten war. Nach dem Westfälischen Frieden am Ende des Dreißigjährigen Krieges 1648 und dem Pyrenäenfrieden mit Spanien 1659 war Frankreich die politische und militärische Vormacht in Europa. Unterstützt von Ministern wie Colbert, Louvois, Lionne und dem Kanzler Séguier konzentrierte er den staatlichen Machtapparat und erweiterte die militärischen, institutionellen und materiellen Machtgrundlagen der französischen Monarchie. Zumindest finanziell wirkten sich die Hugenotten-Verfolgung und der Spanische Erbfolgekrieg aus. Letzterer führte durch die Härte der Kämpfe 1713 fast zu einem Staatsbankrott, der nur durch eine Finanzreform und massive Einsparungen abgewendet wurde.</p>
-<p>1660 heiratete Ludwig Maria Teresa von Spanien. Nach deren Tod im Jahr 1683 heiratete er in morganatischer Ehe insgeheim die Marquise de Maintenon. Ludwig überlebte seinen Sohn Louis, le Grand Dauphin, und seinen ältesten Enkel Louis de Bourgogne und starb am 1. September 1715. Erst sein Urenkel folgte ihm als Ludwig XV. auf den Thron. Der Leichnam Ludwigs XIV. wurde durch den Chirurgen Pierre Dionis (1643–1718) mittels Gerbsäure in Pulverform konserviert[3] und in der von ihm geschaffenen Krypta der Bourbonen in der Abtei von Saint-Denis beigesetzt. Bei der Plünderung der Königsgräber von Saint-Denis im Jahr 1793 wurde sein sehr gut erhaltener Körper mit denen anderer Könige durch Revolutionäre „profaniert“ und sogar kurzzeitig in eine Grube geworfen. Sein einbalsamiertes Herz wurde 1715 in der Jesuitenkirche Saint-Paul-Saint-Louis in der Rue St. Antoine in Paris bestattet. In der Restaurationszeit wurde es, wie alle Herzbestattungen der Angehörigen des Königshauses, in die Abtei von Saint-Denis überführt, wo es sich bis heute in der wiederhergestellten Grablege der französischen Könige in der Krypta befindet.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hier sehen wir die Budgetgerade. Sie kann sich verändern. Je nachdem ob sich die Preise ändern</p>
 
 </div>
 </div>
@@ -48,14 +56,20 @@ Die Geburt Ludwigs XIV. im Schloss Saint-Germain-en-Laye erschien vielen als gl�
 
 <span class="k">def</span> <span class="nf">myplt</span><span class="p">(</span><span class="n">slope</span><span class="p">):</span>
 
-    <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">-</span> <span class="n">slope</span><span class="o">*</span><span class="n">x</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">y1</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">-</span> <span class="n">slope</span><span class="o">*</span><span class="n">x</span>
+    <span class="n">y2</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">slope</span><span class="o">*</span><span class="n">x</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+    
+
+
     
 
 
 
-<span class="n">interact</span><span class="p">(</span><span class="n">myplt</span><span class="p">,</span> <span class="n">slope</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">interact</span><span class="p">(</span><span class="n">myplt</span><span class="p">,</span> <span class="n">slope</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">0.5</span><span class="p">));</span>
 </pre></div>
 
     </div>
@@ -73,13 +87,13 @@ Die Geburt Ludwigs XIV. im Schloss Saint-Germain-en-Laye erschien vielen als gl�
 
  
  
-<div id="5c4f2f89-b3b2-4f20-b4f2-ead8052ba7c9"></div>
+<div id="2332707d-a84b-4267-9a90-dcaaee4e3793"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#5c4f2f89-b3b2-4f20-b4f2-ead8052ba7c9');
+var element = $('#2332707d-a84b-4267-9a90-dcaaee4e3793');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "f14661bced974f628d2a79548c6cc447", "version_major": 2, "version_minor": 0}
+{"model_id": "7ea718a82bfe423e85aba4630e05cd6b", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -95,9 +109,7 @@ var element = $('#5c4f2f89-b3b2-4f20-b4f2-ead8052ba7c9');
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Die Geburt Ludwigs XIV. im Schloss Saint-Germain-en-Laye erschien vielen als glückliches Ereignis, denn dreiundzwanzig Jahre lang war die Ehe seiner Eltern Ludwig XIII. und Anna von Österreich ohne Nachkommen geblieben. Durch seine Geburt wurde die befürchtete Thronfolge von Gaston d'Orléans zurückgestellt. Aus Dankbarkeit erhielt der Neugeborene den Beinamen Dieudonné (der Gottgegebene). Sein Bruder, Herzog Philipp I. d’Orléans, wurde 1640 geboren und starb 1701.</p>
 <p>Schon als Vierjähriger wurde Ludwig am 14. Mai 1643 als König inthronisiert. Er lebte aber bis zu seinem dreizehnten Lebensjahr (1651) unter der Regentschaft seiner Mutter Anna von Österreich. Die tatsächliche Macht übte in dieser Zeit der „regierende Minister“ Kardinal Jules Mazarin aus. Mazarin bereitete Ludwig zielgerichtet auf seine Rolle als absolutistischer Herrscher vor. Schritt für Schritt wurde der junge König an der Macht beteiligt und teilte sich schließlich die Verantwortung mit Mazarin. Durch die außenpolitischen Erfolge der Minister-Kardinäle Richelieu und Mazarin politisch gestärkt, entfaltete Ludwig das absolutistische Königtum hochbarocker Prägung in Frankreich, mit einem Hofleben, das ganz auf die Person des Herrschers zugeschnitten war. Nach dem Westfälischen Frieden am Ende des Dreißigjährigen Krieges 1648 und dem Pyrenäenfrieden mit Spanien 1659 war Frankreich die politische und militärische Vormacht in Europa. Unterstützt von Ministern wie Colbert, Louvois, Lionne und dem Kanzler Séguier konzentrierte er den staatlichen Machtapparat und erweiterte die militärischen, institutionellen und materiellen Machtgrundlagen der französischen Monarchie. Zumindest finanziell wirkten sich die Hugenotten-Verfolgung und der Spanische Erbfolgekrieg aus. Letzterer führte durch die Härte der Kämpfe 1713 fast zu einem Staatsbankrott, der nur durch eine Finanzreform und massive Einsparungen abgewendet wurde.</p>
-<p>1660 heiratete Ludwig Maria Teresa von Spanien. Nach deren Tod im Jahr 1683 heiratete er in morganatischer Ehe insgeheim die Marquise de Maintenon. Ludwig überlebte seinen Sohn Louis, le Grand Dauphin, und seinen ältesten Enkel Louis de Bourgogne und starb am 1. September 1715. Erst sein Urenkel folgte ihm als Ludwig XV. auf den Thron. Der Leichnam Ludwigs XIV. wurde durch den Chirurgen Pierre Dionis (1643–1718) mittels Gerbsäure in Pulverform konserviert[3] und in der von ihm geschaffenen Krypta der Bourbonen in der Abtei von Saint-Denis beigesetzt. Bei der Plünderung der Königsgräber von Saint-Denis im Jahr 1793 wurde sein sehr gut erhaltener Körper mit denen anderer Könige durch Revolutionäre „profaniert“ und sogar kurzzeitig in eine Grube geworfen. Sein einbalsamiertes Herz wurde 1715 in der Jesuitenkirche Saint-Paul-Saint-Louis in der Rue St. Antoine in Paris bestattet. In der Restaurationszeit wurde es, wie alle Herzbestattungen der Angehörigen des Königshauses, in die Abtei von Saint-Denis überführt, wo es sich bis heute in der wiederhergestellten Grablege der französischen Könige in der Krypta befindet.</p>
 
 </div>
 </div>
