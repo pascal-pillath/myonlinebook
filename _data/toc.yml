@@ -49,5 +49,8 @@
   expand_sections: true
   sections:
   - title: Aufgabe 1
-    url: /features/notebooks
+    url: /features/aufgabe_1
+    not_numbered: true
+  - title: Aufgabe 2
+    url: /features/aufgabe_2
     not_numbered: true
