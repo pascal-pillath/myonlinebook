@@ -143,10 +143,10 @@ Betrachten wir noch einmal unsere Lo ̈sung. Ein Schaubild verdeutlicht dies noc
 
  
  
-<div id="6dd6a81e-3ddd-4279-ae45-e13ff2d1909a"></div>
+<div id="cdbefb28-6511-4d09-b68f-3ef775445a03"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#6dd6a81e-3ddd-4279-ae45-e13ff2d1909a');
+var element = $('#cdbefb28-6511-4d09-b68f-3ef775445a03');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "a3a98a23b9484dc294ca716db347a38e", "version_major": 2, "version_minor": 0}
@@ -237,35 +237,19 @@ test</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">nbinteract</span> <span class="k">as</span> <span class="nn">nbi</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
-
-<span class="n">x_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">g1</span> <span class="o">=</span>  <span class="mi">5</span><span class="o">*</span><span class="n">x_vals</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span> 
-
-<span class="n">g2</span> <span class="o">=</span> <span class="mi">3</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">0</span><span class="o">*</span><span class="n">x_vals</span>
-
-
-<span class="n">d1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-
-
-<span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;1000 random points from normal distribution&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;xlim&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">),</span>
-    <span class="s1">&#39;ylim&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
-
-<span class="p">}</span>
-
-
-
-<span class="n">nbi</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="p">(</span><span class="n">g1</span><span class="p">,</span><span class="n">g2</span><span class="p">),</span> <span class="n">options</span> <span class="o">=</span> <span class="n">options</span><span class="p">)</span>
-
-
-
-
-<span class="c1">#nbi.hist(hist_response_function, options=options, mean=(0, 10), sd=(0, 2.0, 0.2))</span>
+<span class="k">def</span> <span class="nf">myfig</span><span class="p">(</span><span class="n">slope</span><span class="p">):</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="n">slope</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    
+    
+    <span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines&#39;</span><span class="p">)</span> <span class="c1">#smooth lines</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    
+<span class="n">interact</span><span class="p">(</span><span class="n">myfig</span><span class="p">,</span> <span class="n">slope</span> <span class="o">=</span><span class="p">(</span><span class="mf">3.11</span><span class="p">,</span><span class="mf">24.11</span><span class="p">,</span><span class="mi">4</span><span class="p">));</span>
 </pre></div>
 
     </div>
@@ -283,13 +267,97 @@ test</p>
 
  
  
-<div id="6f785f6b-c03c-47f0-a40a-21456d3275b0"></div>
+<div id="140541c3-d0aa-442c-988d-7ea27f73239c"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#6f785f6b-c03c-47f0-a40a-21456d3275b0');
+var element = $('#140541c3-d0aa-442c-988d-7ea27f73239c');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "27536bc1f61a410387c445916feb450f", "version_major": 2, "version_minor": 0}
+{"model_id": "6c7a927860724976b30621972b769079", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="k">import</span> <span class="n">interact</span>
+
+<span class="k">def</span> <span class="nf">myplotly</span><span class="p">(</span><span class="n">slope</span><span class="p">):</span>
+    <span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+    <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">]),</span>
+    <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+        <span class="p">)</span>
+    
+    
+
+    
+
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">layout</span> <span class="o">=</span> <span class="n">layout</span><span class="p">)</span>
+
+    
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="c1">#g1</span>
+    <span class="n">g1</span> <span class="o">=</span> <span class="n">slope</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">g1</span><span class="p">,</span>
+        <span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;rgb(0,0,0)&#39;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Marginal Utility g1&#39;</span><span class="p">,</span>
+    <span class="p">))</span>
+
+
+    <span class="c1">#g2</span>
+    <span class="n">g2</span> <span class="o">=</span> <span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">x</span><span class="o">*</span><span class="mi">0</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">g2</span><span class="p">,</span>
+        <span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;rgb(100,100,0)&#39;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Marginal Utility g2&#39;</span><span class="p">,</span>
+    <span class="p">))</span>
+
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines&#39;</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    
+<span class="n">interact</span><span class="p">(</span><span class="n">myplotly</span><span class="p">,</span> <span class="n">slope</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+
+ 
+ 
+<div id="08a7c3b5-f635-4f36-b888-d391466131db"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#08a7c3b5-f635-4f36-b888-d391466131db');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "7ec4a89a7ff4491eb8b06df2dcf8c6fa", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
