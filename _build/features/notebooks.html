@@ -80,13 +80,12 @@ Betrachten wir noch einmal unsere Lo ̈sung. Ein Schaubild verdeutlicht dies noc
         <span class="n">labelbottom</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># labels along the bottom edge are off</span>
     
     
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;time &quot;</span><span class="p">)</span>
     
     
     <span class="c1">#g1 line</span>
     <span class="n">x_limit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">g1</span> <span class="o">=</span> <span class="mi">5</span><span class="o">*</span><span class="n">x_limit</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1">#define g1 line</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_limit</span><span class="p">,</span><span class="n">g1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;olive&#39;</span><span class="p">)</span>    <span class="c1">#plot the g1 line</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_limit</span><span class="p">,</span><span class="n">g1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>    <span class="c1">#plot the g1 line</span>
     
     <span class="c1">#g2line</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
@@ -95,25 +94,31 @@ Betrachten wir noch einmal unsere Lo ̈sung. Ein Schaubild verdeutlicht dies noc
     
     
     <span class="c1"># Blue Dashed Line</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span> <span class="p">(</span><span class="n">t1</span><span class="p">,</span><span class="n">t1</span><span class="p">)</span>  <span class="p">,</span>   <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">))</span>       <span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="n">t1</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">),</span><span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">))</span> <span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
-
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span> <span class="p">(</span><span class="n">t1</span><span class="p">,</span><span class="n">t1</span><span class="p">)</span>  <span class="p">,</span>   <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">))</span>       <span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span> <span class="c1">#vertical</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="n">t1</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">),</span><span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">))</span> <span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span> <span class="c1">#horizontal</span>
+    
+    <span class="c1"># Red Dashed Line</span>
+    <span class="c1">#plt.plot( (t1,t1)  ,   (0,5*t1**(-0.5))       ,color=&#39;Red&#39;, linestyle=&#39;dashed&#39;) #vertical</span>
+    <span class="c1">#plt.plot((0, t1), (5*t1**(-0.5),5*t1**(-0.5)) ,color=&#39;Red&#39;, linestyle=&#39;dashed&#39;) #horizontal</span>
+    
+    
+    
     
 
-    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">t1</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">t1</span><span class="p">),</span> <span class="n">family</span><span class="o">=</span><span class="s2">&quot;serif&quot;</span><span class="p">)</span>  <span class="c1"># number label beneath the x-axis  </span>
-    
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">t1</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="s2">&quot;t1 =&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">t1</span><span class="p">),</span> <span class="n">family</span><span class="o">=</span><span class="s2">&quot;serif&quot;</span><span class="p">)</span>  <span class="c1"># number label beneath the x-axis  </span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">t1</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.8</span><span class="p">,</span> <span class="s2">&quot;t2 =&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">60</span><span class="o">-</span><span class="n">t1</span><span class="p">),</span> <span class="n">family</span><span class="o">=</span><span class="s2">&quot;serif&quot;</span><span class="p">)</span>
     
     
     <span class="k">if</span> <span class="n">t1</span> <span class="o">==</span> <span class="mf">11.11</span><span class="p">:</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">35</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;marginal utility&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span> <span class="p">,</span> <span class="s2">&quot;= marginal utility &quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+        <span class="n">relation</span> <span class="o">=</span> <span class="s2">&quot;=&quot;</span>
     <span class="k">elif</span> <span class="n">t1</span> <span class="o">&gt;=</span> <span class="mf">11.11</span><span class="p">:</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">35</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;marginal utility&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span> <span class="p">,</span> <span class="s2">&quot;&gt; marginal utility &quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+        <span class="n">relation</span> <span class="o">=</span> <span class="s2">&quot;&gt;&quot;</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">35</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;marginal utility&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span> <span class="p">,</span> <span class="s2">&quot;&lt; marginal utility &quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+        <span class="n">relation</span> <span class="o">=</span> <span class="s2">&quot;&lt;&quot;</span>
     
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">39</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;marginal utility g2&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">22</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span> <span class="p">,</span> <span class="n">relation</span> <span class="o">+</span> <span class="s2">&quot; marginal utility g1&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
     
 <span class="n">interact</span><span class="p">(</span><span class="n">myplt</span><span class="p">,</span> <span class="n">t1</span><span class="o">=</span><span class="p">(</span><span class="mf">3.11</span><span class="p">,</span><span class="mf">24.11</span><span class="p">,</span><span class="mi">4</span><span class="p">));</span>
 </pre></div>
@@ -133,13 +138,13 @@ Betrachten wir noch einmal unsere Lo ̈sung. Ein Schaubild verdeutlicht dies noc
 
  
  
-<div id="733d2b2a-057d-449f-8f5d-ac4750d27f0d"></div>
+<div id="a4c2e84e-d372-41db-958f-b72093c80e71"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#733d2b2a-057d-449f-8f5d-ac4750d27f0d');
+var element = $('#a4c2e84e-d372-41db-958f-b72093c80e71');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "63dcbf495f884055809574ae8bea2ce6", "version_major": 2, "version_minor": 0}
+{"model_id": "139da7af7aec473c8e0cde115c4454c0", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
