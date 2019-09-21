@@ -143,13 +143,13 @@ Betrachten wir noch einmal unsere Lo ̈sung. Ein Schaubild verdeutlicht dies noc
 
  
  
-<div id="80f923ae-adb2-4dd9-8ac4-9abbfd497d94"></div>
+<div id="14d13103-1efb-43dc-a219-8bf5edae3853"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#80f923ae-adb2-4dd9-8ac4-9abbfd497d94');
+var element = $('#14d13103-1efb-43dc-a219-8bf5edae3853');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "b30ebe80145d4d369c6e2d7a66e76c06", "version_major": 2, "version_minor": 0}
+{"model_id": "4b02d3760bd94f4c8988e1b3afeae1cd", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -230,61 +230,6 @@ test</p>
 </div>
 </div>
 
-<div class="jb_cell">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">myfig</span><span class="p">(</span><span class="n">slope</span><span class="p">):</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="n">slope</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
-    
-    
-    <span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines&#39;</span><span class="p">)</span> <span class="c1">#smooth lines</span>
-    <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    
-<span class="n">interact</span><span class="p">(</span><span class="n">myfig</span><span class="p">,</span> <span class="n">slope</span> <span class="o">=</span><span class="p">(</span><span class="mf">3.11</span><span class="p">,</span><span class="mf">24.11</span><span class="p">,</span><span class="mi">4</span><span class="p">));</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-
-
-
- 
- 
-<div id="96baa832-56f5-4006-aa13-57f1f139fc91"></div>
-<div class="output_subarea output_widget_view ">
-<script type="text/javascript">
-var element = $('#96baa832-56f5-4006-aa13-57f1f139fc91');
-</script>
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "6c7a927860724976b30621972b769079", "version_major": 2, "version_minor": 0}
-</script>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
 <div class="jb_cell tag_interactive tag_hide_input">
 
 <div class="cell border-box-sizing code_cell rendered">
@@ -292,7 +237,8 @@ var element = $('#96baa832-56f5-4006-aa13-57f1f139fc91');
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install plotly 
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="k">import</span> <span class="n">interact</span>
 
@@ -346,18 +292,31 @@ var element = $('#96baa832-56f5-4006-aa13-57f1f139fc91');
 <div class="jb_output_wrapper output_widget_view  }}">
 <div class="output_area">
 
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Requirement already satisfied: plotly in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (4.1.1)
+Requirement already satisfied: retrying&gt;=1.3.3 in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from plotly) (1.3.3)
+Requirement already satisfied: six in /Users/pascal/Library/Python/3.6/lib/python/site-packages (from plotly) (1.12.0)
+<span class="ansi-yellow-fg">WARNING: You are using pip version 19.2.1, however version 19.2.3 is available.
+You should consider upgrading via the &#39;pip install --upgrade pip&#39; command.</span>
+</pre>
+</div>
+</div>
+</div>
+<div class="jb_output_wrapper output_widget_view  }}">
+<div class="output_area">
+
 
 
 
  
  
-<div id="0b346e87-8ce4-441c-84e2-ae575d2195bf"></div>
+<div id="f71a2ba7-2453-43ea-9560-6041f39ba576"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#0b346e87-8ce4-441c-84e2-ae575d2195bf');
+var element = $('#f71a2ba7-2453-43ea-9560-6041f39ba576');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "7ec4a89a7ff4491eb8b06df2dcf8c6fa", "version_major": 2, "version_minor": 0}
+{"model_id": "40e07662b5aa4091a2111038ef9eeedb", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
