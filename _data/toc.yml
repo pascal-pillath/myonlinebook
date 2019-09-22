@@ -23,7 +23,7 @@
 
 # Top-level page
 - title: Home
-  url: /intro
+  url: /home
   not_numbered: true
 
 # External link
@@ -44,13 +44,13 @@
 
 # A chapter w/ a collection of sections beneath it
 - title: Übung 1
-  url: /features/features
+  url: /uebung_1/uebung_1
   not_numbered: true
   expand_sections: true
   sections:
   - title: Aufgabe 1
-    url: /features/aufgabe_1
+    url: /uebung_1/aufgabe_1
     not_numbered: true
   - title: Aufgabe 2
-    url: /features/aufgabe_2
+    url: /uebung_1/aufgabe_2
     not_numbered: true

@@ -1,4 +1,4 @@
-# Aufgabenblatt 1
+# Übung 1
 
 Auf diesem Blatt geht es um folgende Themen:
 
