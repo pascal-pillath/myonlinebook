@@ -43,17 +43,17 @@
 #- header: Demo textbook
 
 # A chapter w/ a collection of sections beneath it
-- title: Übung 1
-  url: /uebung_1/uebung_1
-  not_numbered: true
-  expand_sections: true
-  sections:
-  - title: Aufgabe 1
-    url: /uebung_1/aufgabe_1
-    not_numbered: true
-  - title: Aufgabe 2
-    url: /uebung_1/aufgabe_2
-    not_numbered: true
+#- title: Übung 1
+#  url: /uebung_1/uebung_1
+#  not_numbered: true
+  #expand_sections: true
+  #sections:
+#  - title: Aufgabe 1
+#    url: /uebung_1/aufgabe_1
+#    not_numbered: true
+#  - title: Aufgabe 2
+#    url: /uebung_1/aufgabe_2
+#    not_numbered: true
 
 - title: bqplot
   url: /uebung_1/bqplot_test

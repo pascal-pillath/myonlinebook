@@ -7,9 +7,9 @@ has_widgets: true
 title: |-
   bqplot
 prev_page:
-  url: /uebung_1/aufgabe_2.html
+  url: /home.html
   title: |-
-    Aufgabe 2
+    Home
 next_page:
   url: 
   title: |-
@@ -24,7 +24,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bqplot</span> <span class="k">import</span>  <span class="o">*</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bqplot</span> <span class="k">import</span>  <span class="n">LinearScale</span><span class="p">,</span><span class="n">Axis</span><span class="p">,</span><span class="n">Lines</span><span class="p">,</span><span class="n">Figure</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
@@ -43,15 +43,19 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 
 
-<span class="c1">#Lines</span>
+<span class="c1">###Lines</span>
 
-<span class="n">g1</span> <span class="o">=</span> <span class="n">Lines</span><span class="p">(</span> <span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
-            <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">),</span>
+<span class="c1">#g1</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">g1</span> <span class="o">=</span> <span class="n">Lines</span><span class="p">(</span> <span class="n">x</span><span class="o">=</span><span class="n">x1</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="o">*</span><span class="n">x1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">),</span>
             <span class="n">scales</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">x_sc</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">y_sc</span><span class="p">},</span>
             <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">])</span>
 
-<span class="n">g2</span> <span class="o">=</span> <span class="n">Lines</span><span class="p">(</span> <span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
-            <span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">x</span><span class="o">*</span><span class="mi">0</span><span class="p">,</span>
+<span class="c1">#g2</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">g2</span> <span class="o">=</span> <span class="n">Lines</span><span class="p">(</span> <span class="n">x</span><span class="o">=</span><span class="n">x2</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">x2</span><span class="o">*</span><span class="mi">0</span><span class="p">,</span>
             <span class="n">scales</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">x_sc</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">y_sc</span><span class="p">},</span>
             <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">])</span>
 
@@ -95,13 +99,13 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
  
  
-<div id="9c1ee04d-0466-40f0-951c-7789870494f0"></div>
+<div id="57f5c844-e5e3-4c65-8c60-b89e968a9f55"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#9c1ee04d-0466-40f0-951c-7789870494f0');
+var element = $('#57f5c844-e5e3-4c65-8c60-b89e968a9f55');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "7b16750ffa7a4c2b8012ff23ebc2755b", "version_major": 2, "version_minor": 0}
+{"model_id": "d3146ae5c17947ac9c06f820177ebd98", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -115,13 +119,13 @@ var element = $('#9c1ee04d-0466-40f0-951c-7789870494f0');
 
  
  
-<div id="25720f8a-07b0-4583-91b7-2f0b00a7fa2d"></div>
+<div id="b9231f72-9993-4277-a760-8bd137ac8729"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#25720f8a-07b0-4583-91b7-2f0b00a7fa2d');
+var element = $('#b9231f72-9993-4277-a760-8bd137ac8729');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "eb6395d8973f459a8943acd058e88538", "version_major": 2, "version_minor": 0}
+{"model_id": "e6ad124bb1d84edfbff58e2728b3e505", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -135,13 +139,13 @@ var element = $('#25720f8a-07b0-4583-91b7-2f0b00a7fa2d');
 
  
  
-<div id="77315491-1f46-4ca6-8041-889e56330361"></div>
+<div id="7763a351-4e1a-47a7-99fd-180f4447309f"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#77315491-1f46-4ca6-8041-889e56330361');
+var element = $('#7763a351-4e1a-47a7-99fd-180f4447309f');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "d313828e038748dabb7f710dbc96fdf7", "version_major": 2, "version_minor": 0}
+{"model_id": "bfd046c9d84b403ab02914e0a3e4255e", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
