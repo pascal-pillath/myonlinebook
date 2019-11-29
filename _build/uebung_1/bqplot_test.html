@@ -55,9 +55,6 @@ $$<p><br/><br/>
 
 <span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
 
-
-
-
 <span class="c1">###General Setup</span>
 
 <span class="c1"># Axes</span>
@@ -67,10 +64,10 @@ $$<p><br/><br/>
 <span class="n">ax_x</span> <span class="o">=</span> <span class="n">Axis</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Zeit&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">x_sc</span><span class="p">,</span> <span class="n">tick_format</span><span class="o">=</span><span class="s1">&#39;0.0f&#39;</span><span class="p">,</span><span class="n">tick_values</span> <span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">])</span>
 
 
-<span class="n">ax_y</span> <span class="o">=</span> <span class="n">Axis</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Test Y&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">y_sc</span><span class="p">,</span>
+<span class="n">ax_y</span> <span class="o">=</span> <span class="n">Axis</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">y_sc</span><span class="p">,</span>
             <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">,</span> <span class="n">tick_format</span><span class="o">=</span><span class="s1">&#39;0.2f&#39;</span><span class="p">)</span>
 
-<span class="n">ax_y2</span> <span class="o">=</span> <span class="n">Axis</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Test Y2&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">y_sc</span><span class="p">,</span>
+<span class="n">ax_y2</span> <span class="o">=</span> <span class="n">Axis</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">y_sc</span><span class="p">,</span>
             <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">,</span> <span class="n">tick_format</span><span class="o">=</span><span class="s1">&#39;0.2f&#39;</span><span class="p">,</span> <span class="n">side</span> <span class="o">=</span> <span class="s1">&#39;right&#39;</span><span class="p">)</span>
 
 
@@ -84,13 +81,13 @@ $$<p><br/><br/>
 <span class="n">ax_hor1</span> <span class="o">=</span> <span class="n">Lines</span><span class="p">(</span> <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
                     <span class="n">y</span><span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> 
                     <span class="n">scales</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">x_sc</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">y_sc</span><span class="p">},</span> 
-                    <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">]</span>
+                    <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">]</span>
                    <span class="p">)</span>
 
 <span class="n">ax_hor2</span> <span class="o">=</span> <span class="n">Lines</span><span class="p">(</span> <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">60</span><span class="p">,</span><span class="mi">60</span><span class="p">],</span>
                     <span class="n">y</span><span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> 
                     <span class="n">scales</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">x_sc</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">y_sc</span><span class="p">},</span> 
-                    <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">]</span>
+                    <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">]</span>
                    <span class="p">)</span>
 
 
@@ -108,18 +105,18 @@ $$<p><br/><br/>
 <span class="n">g1</span> <span class="o">=</span> <span class="n">Lines</span><span class="p">(</span> <span class="n">x</span><span class="o">=</span><span class="n">x1</span><span class="p">,</span>
             <span class="n">y</span><span class="o">=</span><span class="mi">5</span><span class="o">*</span><span class="n">x1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">),</span>
             <span class="n">scales</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">x_sc</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">y_sc</span><span class="p">},</span>
-            <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">],</span>
+            <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">],</span>
             <span class="n">display_legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
-            <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Marginal Utility g1&#39;</span><span class="p">])</span>
+            <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Ableitung der Durchschittsnote nach t1&#39;</span><span class="p">])</span>
 
 <span class="c1">#g2</span>
 <span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">g2</span> <span class="o">=</span> <span class="n">Lines</span><span class="p">(</span> <span class="n">x</span><span class="o">=</span><span class="n">x2</span><span class="p">,</span>
             <span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">x2</span><span class="o">*</span><span class="mi">0</span><span class="p">,</span>
             <span class="n">scales</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">x_sc</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">y_sc</span><span class="p">},</span>
-            <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">],</span>
+            <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">],</span>
             <span class="n">display_legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
-            <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Marginal Utility g2&#39;</span><span class="p">])</span>
+            <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Ableitung der Durchschittsnote nach t2&#39;</span><span class="p">])</span>
 
 
 
@@ -142,6 +139,11 @@ $$<p><br/><br/>
                 <span class="n">line_style</span> <span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
 
 
+<span class="n">g_horiz2</span> <span class="o">=</span> <span class="n">Lines</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="n">t1</span><span class="p">,</span><span class="mi">60</span><span class="p">],</span>
+                <span class="n">y</span><span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">),</span> <span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)],</span> 
+                <span class="n">scales</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">x_sc</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">y_sc</span><span class="p">},</span> 
+                <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;orange&#39;</span><span class="p">],</span> 
+                <span class="n">line_style</span> <span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
 
 
 
@@ -171,11 +173,12 @@ $$<p><br/><br/>
                     <span class="n">g1</span><span class="p">,</span> 
                     <span class="n">g2</span><span class="p">,</span> 
                     <span class="n">g_vertical</span><span class="p">,</span> 
-                    <span class="n">g_horiz</span><span class="p">,</span> 
+                    <span class="n">g_horiz</span><span class="p">,</span>
+                    <span class="n">g_horiz2</span><span class="p">,</span>
                     <span class="n">lab1</span><span class="p">,</span>
                     <span class="n">lab2</span><span class="p">],</span>
 
-            <span class="n">legend_location</span><span class="o">=</span><span class="s1">&#39;top-right&#39;</span><span class="p">,</span>
+            <span class="n">legend_location</span><span class="o">=</span><span class="s1">&#39;top-left&#39;</span><span class="p">,</span>
             <span class="n">background_style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span><span class="s1">&#39;white&#39;</span><span class="p">}</span>
             <span class="p">)</span>
 
@@ -197,13 +200,18 @@ $$<p><br/><br/>
         
         <span class="n">t1</span> <span class="o">=</span> <span class="n">change</span><span class="p">[</span><span class="s1">&#39;new&#39;</span><span class="p">]</span>
         
-        <span class="n">g_vertical</span><span class="o">.</span> <span class="n">x</span><span class="o">=</span> <span class="p">[</span><span class="n">t1</span><span class="p">,</span><span class="n">t1</span><span class="p">]</span>
-        <span class="n">g_vertical</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)]</span>
-        
-        
-        <span class="n">g_horiz</span><span class="o">.</span> <span class="n">x</span><span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">t1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">t1</span> <span class="o">&lt;=</span> <span class="mf">11.11</span><span class="p">:</span>
+            <span class="n">g_vertical</span><span class="o">.</span> <span class="n">x</span><span class="o">=</span> <span class="p">[</span><span class="n">t1</span><span class="p">,</span><span class="n">t1</span><span class="p">]</span>
+            <span class="n">g_vertical</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">g_vertical</span><span class="o">.</span> <span class="n">x</span><span class="o">=</span> <span class="p">[</span><span class="n">t1</span><span class="p">,</span><span class="n">t1</span><span class="p">]</span>
+            <span class="n">g_vertical</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span>
+            
+            
+        <span class="n">g_horiz</span><span class="o">.</span><span class="n">x</span><span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">t1</span><span class="p">]</span>
         <span class="n">g_horiz</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">),</span> <span class="mi">5</span><span class="o">*</span><span class="n">t1</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)]</span>
         
+        <span class="n">g_horiz2</span><span class="o">.</span> <span class="n">x</span><span class="o">=</span> <span class="p">[</span><span class="n">t1</span><span class="p">,</span><span class="mi">60</span><span class="p">]</span>
         
         <span class="n">lab1</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span><span class="p">[</span><span class="n">t1</span><span class="p">]</span>
         <span class="n">lab1</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span><span class="p">[</span><span class="s2">&quot;t1 = &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">t1</span><span class="p">)]</span>
@@ -229,13 +237,13 @@ $$<p><br/><br/>
 
  
  
-<div id="bee9ddc3-c51d-4760-9309-f2567dfaad33"></div>
+<div id="bd6b8009-b285-4d6c-89dc-029f61926910"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#bee9ddc3-c51d-4760-9309-f2567dfaad33');
+var element = $('#bd6b8009-b285-4d6c-89dc-029f61926910');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "4635826c42c14b0d83c8c64d7187cd55", "version_major": 2, "version_minor": 0}
+{"model_id": "5a5e9c89c91f4989a5b2e2ee76784dde", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -249,13 +257,13 @@ var element = $('#bee9ddc3-c51d-4760-9309-f2567dfaad33');
 
  
  
-<div id="8475ae2d-7e22-464c-a10a-bbece61ccfa9"></div>
+<div id="44d328c3-f04a-47f3-baf5-8d7267fc3d56"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#8475ae2d-7e22-464c-a10a-bbece61ccfa9');
+var element = $('#44d328c3-f04a-47f3-baf5-8d7267fc3d56');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "a9f40a250f4d4b03ae14c8aedbb77855", "version_major": 2, "version_minor": 0}
+{"model_id": "a1dd2b1cd6ea4bee96133f6c5377d1d2", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -269,18 +277,37 @@ var element = $('#8475ae2d-7e22-464c-a10a-bbece61ccfa9');
 
  
  
-<div id="9de65d80-c292-41dd-9c1c-aeaac00d44af"></div>
+<div id="c7b30a0a-7ce6-4637-ac71-1af18df118e9"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#9de65d80-c292-41dd-9c1c-aeaac00d44af');
+var element = $('#c7b30a0a-7ce6-4637-ac71-1af18df118e9');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "c09f51625fc043acaab54e7249af8a6f", "version_major": 2, "version_minor": 0}
+{"model_id": "02deb37fe24145148641614221ad3845", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
 </div>
 </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
