@@ -55,7 +55,12 @@
 #    url: /uebung_1/aufgabe_2
 #    not_numbered: true
 
-- title: bqplot
+- title: übung 1
+  url: /uebung_1/bqplot_test
+  not_numbered: true
+  expand_sections: true
+  
+- title: übung 1
   url: /uebung_1/bqplot_test
   not_numbered: true
   expand_sections: true
